@@ -4,15 +4,21 @@ import { Provider } from 'react-redux';
 import { store } from './store/store';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { ThemeProvider } from "styled-components";
+import theme from "./theme";
+import GlobalStyle from "./styles";
 
 const container = document.getElementById('root') as HTMLElement;
 const root = createRoot(container);
 
 root.render(
   <React.StrictMode>
+    <ThemeProvider theme={theme}>
     <Provider store={store}>
+      <GlobalStyle />
       <App />
     </Provider>
+    </ThemeProvider>
   </React.StrictMode>
 );
 
