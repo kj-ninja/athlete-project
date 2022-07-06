@@ -14,10 +14,10 @@ const root = createRoot(container);
 root.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
-    <Provider store={store}>
-      <GlobalStyle />
-      <App />
-    </Provider>
+      <Provider store={store}>
+        <GlobalStyle />
+        <App />
+      </Provider>
     </ThemeProvider>
   </React.StrictMode>
 );
