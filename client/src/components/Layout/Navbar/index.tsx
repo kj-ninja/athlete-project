@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { FC } from 'react';
+import { Navigation, HamburgerMenu } from "./styles";
 
-const Navbar = () => {
+interface Props {
+  visible: boolean
+  setVisible: (visible: boolean) => void
+}
+
+const Navbar:FC<Props> = ({visible, setVisible}) => {
+
   return (
-    <div>
-      Navigation
-    </div>
+    <Navigation>
+      <HamburgerMenu onClick={() => setVisible(!visible)}>
+        Athletic-Project
+      </HamburgerMenu>
+    </Navigation>
   );
 };
 
